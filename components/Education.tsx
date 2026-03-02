@@ -6,14 +6,14 @@ const education = [
     degree: "Master of Science in Computer Science",
     dates: "2021 – 2022",
     location: "Fremont, CA",
-    logo: "/logos/SFBU.png",
+    logo: "logos/SFBU.png",
   },
   {
     school: "University of Arizona",
     degree: "Bachelor of Science in Computer Science and Mathematics",
     dates: "2014 – 2018",
     location: "Tucson, AZ",
-    logo: "/logos/UOA.jpeg",
+    logo: "logos/UOA.jpeg",
   },
 ];
 

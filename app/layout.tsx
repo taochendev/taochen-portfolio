@@ -90,7 +90,7 @@ export default function RootLayout({
               className="flex items-center gap-2 text-[1.18125rem] font-medium text-foreground transition-colors duration-200 hover:text-foreground-muted"
             >
               <Image
-                src="/logos/personal_logo.png"
+                src="logos/personal_logo.png"
                 alt=""
                 width={36}
                 height={36}
@@ -124,7 +124,7 @@ export default function RootLayout({
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:px-6 lg:px-8">
             <div className="flex items-center gap-2">
               <Image
-                src="/logos/personal_logo.png"
+                src="logos/personal_logo.png"
                 alt=""
                 width={28}
                 height={28}

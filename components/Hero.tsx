@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="w-full space-y-8">
         <div className="mx-auto w-full max-w-5xl">
           <Image
-            src="/logos/TaoChen2.png"
+            src="logos/TaoChen2.png"
             alt="Tao Chen - Senior Full Stack Engineer"
             width={1152}
             height={494}

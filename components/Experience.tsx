@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const companyLogos: Record<string, string> = {
-  "Creatify AI": "/logos/creatify_ai_logo.jpg",
-  "HeySam AI": "/logos/heysam_logo.jpg",
-  "WiFrost Inc": "/logos/WiFrost_logo.jpg",
-  "Adaptrum Inc": "/logos/Adaptrum_logo.jpg",
+  "Creatify AI": "logos/creatify_ai_logo.jpg",
+  "HeySam AI": "logos/heysam_logo.jpg",
+  "WiFrost Inc": "logos/WiFrost_logo.jpg",
+  "Adaptrum Inc": "logos/Adaptrum_logo.jpg",
 };
 
 const experience = [
@@ -79,53 +79,55 @@ export default function Experience() {
           Experience
         </h2>
         <div className="relative space-y-0">
-        <div
-          className="absolute left-[11px] top-2 bottom-2 w-px bg-white/10 sm:left-4"
-          aria-hidden
-        />
-        {experience.map((role, index) => (
           <div
-            key={`${role.company}-${role.title}-${index}`}
-            className="group relative flex gap-6 pb-12 last:pb-0 sm:gap-8"
-          >
+            className="absolute left-[11px] top-2 bottom-2 w-px bg-white/10 sm:left-4"
+            aria-hidden
+          />
+          {experience.map((role, index) => (
             <div
-              className="relative z-10 mt-1.5 h-3 w-3 shrink-0 rounded-full border-2 border-foreground/20 bg-background sm:mt-2 sm:h-4 sm:w-4"
-              aria-hidden
-            />
-            <div className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/[0.02] px-5 py-4 transition-transform duration-200 hover:scale-[1.03] hover:border-white/20 hover:bg-white/[0.04] sm:px-6 sm:py-5">
-              <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between">
-                <div className="flex items-center gap-3">
-                  {companyLogos[role.company] && (
-                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-white/5 sm:h-12 sm:w-12">
-                      <Image
-                        src={companyLogos[role.company]}
-                        alt=""
-                        fill
-                        className="object-contain p-0.5"
-                        sizes="48px"
-                      />
+              key={`${role.company}-${role.title}-${index}`}
+              className="group relative flex gap-6 pb-12 last:pb-0 sm:gap-8"
+            >
+              <div
+                className="relative z-10 mt-1.5 h-3 w-3 shrink-0 rounded-full border-2 border-foreground/20 bg-background sm:mt-2 sm:h-4 sm:w-4"
+                aria-hidden
+              />
+              <div className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/[0.02] px-5 py-4 transition-transform duration-200 hover:scale-[1.03] hover:border-white/20 hover:bg-white/[0.04] sm:px-6 sm:py-5">
+                <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between">
+                  <div className="flex items-center gap-3">
+                    {companyLogos[role.company] && (
+                      <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-white/5 sm:h-12 sm:w-12">
+                        <Image
+                          src={companyLogos[role.company]}
+                          alt=""
+                          fill
+                          className="object-contain p-0.5"
+                          sizes="48px"
+                        />
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="text-base font-semibold text-foreground sm:text-lg">
+                        {role.company}
+                      </h3>
+                      <p className="text-sm text-foreground-muted">
+                        {role.title}
+                      </p>
                     </div>
-                  )}
-                  <div>
-                    <h3 className="text-base font-semibold text-foreground sm:text-lg">
-                      {role.company}
-                    </h3>
-                    <p className="text-sm text-foreground-muted">{role.title}</p>
                   </div>
+                  <p className="text-sm text-foreground-muted">{role.dates}</p>
                 </div>
-                <p className="text-sm text-foreground-muted">{role.dates}</p>
+                <p className="mb-3 mt-1 text-xs text-foreground-muted/80">
+                  {role.location}
+                </p>
+                <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground-muted">
+                  {role.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
-              <p className="mb-3 mt-1 text-xs text-foreground-muted/80">
-                {role.location}
-              </p>
-              <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground-muted">
-                {role.bullets.map((bullet, i) => (
-                  <li key={i}>{bullet}</li>
-                ))}
-              </ul>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
     </section>

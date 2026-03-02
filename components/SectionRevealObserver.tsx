@@ -7,7 +7,9 @@ const THRESHOLD = 0.1;
 
 export default function SectionRevealObserver() {
   useEffect(() => {
-    const elements = document.querySelectorAll<HTMLElement>("[data-section-reveal]");
+    const elements = document.querySelectorAll<HTMLElement>(
+      "[data-section-reveal]"
+    );
     if (elements.length === 0) return;
 
     const observer = new IntersectionObserver(
